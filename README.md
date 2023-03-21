@@ -39,7 +39,7 @@ Use the ```derivePHMM.AAbin()``` function from aphid to build a PHMM from the AA
 
 Answer the following questions about the resulting HMM 
 1) Look at the emission matrix. What amino acid has the higest probability of emission from the 2nd module? 
-2) Look at the transition matrix. This format is slightly different from what we have seen before. Instead of listing _every_ state they list the possible transitions between Deletion (D), Insertion (I), or Module (M) states. Identify the row that contains hidden state transition from Module to Insertion. Which module has the greatest transition probability from Module to Insertion? 
+2) Look at the transition matrix. This format is slightly different from what we have seen before. Instead of listing _every_ state they list the possible transitions between Deletion (D), Insertion (I), or Module (M) states. Identify the row that contains hidden state transition from Module to Insertion. Which module(s) has the greatest transition probability from Module to Insertion? 
  
 
 
@@ -54,3 +54,19 @@ For each of the new protein sequences use the ```forward()``` method to examine 
 There is an option to report either the full probability or the Log odds score (odds = T or odds = F). You can use either to answer the questions below
 
 1) Which sequence is likely **not** an ortholog of the BBH1 gene?
+
+
+### Step 6 - Update our model
+
+We want to update our PHMM using the two putative orthologues identified in the step above. 
+
+Remove the sequence that is not likely to be a BBH1 orthologue. (You can subset the AAbin object like you would an array)
+
+Use the ```train()``` method to train the original PHMM using the two new sequences (you do not need to align the sequences) 
+
+Based on this newly trained HMM answer the following questions
+
+1) Look at the new emission matrix. What amino acid has the higest probability of emission from the 2nd module?
+2) ook at the transition matrix. This format is slightly different from what we have seen before. Instead of listing _every_ state they list the possible transitions between Deletion (D), Insertion (I), or Module (M) states. Identify the row that contains hidden state transition from Module to Insertion. Which module(s) has the greatest transition probability from Module to Insertion? 
+3) How does the probability of observing New_Seq2 change between the old and new PHMM? (Does observing the sequence get more or less likely?)
+
