@@ -8,12 +8,13 @@ The scenario we will be replicating is very common in my work. We are often inte
 
 First we build an HMM from the reference sequences. Then we use that HMM to find orthologues in the new genome. 
 
-### Step 1 - Load Packages
+### Step 1 - Load Packages 
 
 Install and load the aphid package ("aphid")
+
 Install and load the sequence package ("ape")
 
-### Step 2 - Read in Sequences
+### Step 2 - Read in Sequences (1 point)
 
 Our reference sequences are in the file BBH1.fasta . This is a part of a real analysis conducted on budding yeast species. 
 
@@ -22,7 +23,7 @@ The BBH1 gene is a part of the carnitine biosynthesis pathway. In our preliminar
 Read in the sequence file using the function ```read.FASTA()```. Make sure to set the type to AA
 
 
-### Step 3 - Align the sequences
+### Step 3 - Align the sequences (1 point each)
 
 Use the ```align()``` function from aphid to align the input sequences. Save the output into a new variable
 
@@ -31,7 +32,7 @@ Answer the following questions about the alignment
 2) How many of the hidden states were "Insertion" states? 
 
 
-### Step 4 - Create a PHMM 
+### Step 4 - Create a PHMM (1 point each)
 
 We want to utilize the fact that the aphid package _knows_ about the relationships between amino acids 
 
@@ -43,7 +44,7 @@ Answer the following questions about the resulting HMM
  
 
 
-### Step 5 - Probability of new sequences
+### Step 5 - Probability of new sequences (1 point each)
 
 You have three new sequences. You want to determine if any of these three sequences are likely to encode the BBH1 gene. 
 
@@ -56,7 +57,7 @@ There is an option to report either the full probability or the Log odds score (
 1) Which sequence is likely **not** an ortholog of the BBH1 gene?
 
 
-### Step 6 - Update our model
+### Step 6 - Update our model (1 point each)
 
 We want to update our PHMM using the two putative orthologues identified in the step above. 
 
@@ -70,3 +71,6 @@ Based on this newly trained HMM answer the following questions
 2) ook at the transition matrix. This format is slightly different from what we have seen before. Instead of listing _every_ state they list the possible transitions between Deletion (D), Insertion (I), or Module (M) states. Identify the row that contains hidden state transition from Module to Insertion. Which module(s) has the greatest transition probability from Module to Insertion? 
 3) How does the probability of observing New_Seq2 change between the old and new PHMM? (Does observing the sequence get more or less likely?)
 
+### Step 7 (1 point)
+
+Knit your results and upload them 
