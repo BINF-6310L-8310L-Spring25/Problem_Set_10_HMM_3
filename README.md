@@ -12,6 +12,7 @@ First we build an HMM from the reference sequences. Then we use that HMM to find
 
 Install and load the aphid package ("aphid")
 Install and load the sequence input package ("seqinr")
+Install and load the sequence package ("ape")
 
 ### Step 2 - Read in Sequences
 
@@ -30,3 +31,15 @@ Answer the following questions about the alignment
 1) How many modules were in the PHMM used to create the alignment
 2) How many of the hidden states were "Insertion" states? 
 
+
+### Step 4 - Create a PHMM 
+
+We want to utilize the fact that the aphid package _knows_ about the relationships between amino acids 
+
+So first convert the sequence alignment to an AAbin object using the function ```as.AAbin()```
+
+Use the ```derivePHMM.AAbin()``` function from aphid to build a PHMM from the AAbin sequence alignment. Save the output into a new variable
+
+Answer the following questions about the resulting HMM 
+1) Look at the emission matrix. What amino acid has the higest probability of emission from the 2nd module? 
+2) Look at the transition matrix. This format is slightly different from what we have seen before. 
