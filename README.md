@@ -87,10 +87,17 @@ Use the ```train()``` method to train the original PHMM using the two new sequen
 
 Based on this newly trained HMM answer the following questions
 
-1) Look at the new emission matrix. What amino acid has the higest probability of emission from the 2nd module?
-2) ook at the transition matrix. This format is slightly different from what we have seen before. Instead of listing _every_ state they list the possible transitions between Deletion (D), Insertion (I), or Module (M) states. Identify the row that contains hidden state transition from Module to Insertion. Which module(s) has the greatest transition probability from Module to Insertion? 
-3) How does the probability of observing New_Seq2 change between the old and new PHMM? (Does observing the sequence get more or less likely?)
+# Question 6
+Look at the new emission matrix. What amino acid has the highest probability of emission from the 2nd module?
 
-### Step 7 (1 point)
+# Question 7
+Look at the transition matrix. This format is slightly different from what we have seen before. Instead of listing _every_ state they list the possible transitions between Deletion (D), Insertion (I), or Module (M) states. Identify the row that contains hidden state transition from Module to Insertion. Which module(s) has the greatest transition probability from Module to Insertion? 
+
+# Question 8
+How does the probability of observing New_Seq2 change between the old and new PHMM? (Does observing the sequence get more or less likely?)
+
+&nbsp;
+&nbsp;
+### Step 7 
 
 Knit your results and upload them 
