@@ -25,6 +25,8 @@ Read in the sequence file using the function ```read.FASTA()```. Make sure to se
 # Question 1
 
 What is the mean sequence length of the BBH1 sequences?
+
+&nbsp;
 &nbsp;
 
 ### Step 3 - Align the sequences (1 point each)
@@ -33,10 +35,10 @@ Use the ```align()``` function from aphid to align the input sequences. Save the
 
 Answer the following questions about the alignment
 
-# Question 2
+# Question 3
 How many modules were in the PHMM used to create the alignment
 
-# Question 3
+# Question 4
 How many of the hidden states were "Insertion" states? _Hint_ you will need to find the number of times that "I" is used in the alignment
 
 &nbsp;
@@ -50,11 +52,11 @@ Use the ```derivePHMM.AAbin()``` function from aphid to build a PHMM from the AA
 
 Answer the following questions about the resulting HMM 
 
-# Question 3
+# Question 5
 
 Look at the emission matrix. What amino acid has the highest probability of emission from the 2nd module? The value will be closest to 0
 
-# Question 4
+# Question 6
 Look at the transition matrix. This format is slightly different from what we have seen before. Instead of listing _every_ state they list the possible transitions between Deletion (D), Insertion (I), or Module (M) states. Identify the row that contains hidden state transition from Module to Insertion. Which module(s) has the greatest transition probability from Module to Insertion? 
  
 &nbsp;
@@ -70,14 +72,14 @@ For each of the new protein sequences use the ```forward()``` method to examine 
 
 There is an option to report either the full probability or the Log odds score (odds = T or odds = F). You can use either to answer the questions below
 
-# Question 5
+# Question 7
 
 Which sequence is likely **not** an ortholog of the BBH1 gene?
 
 &nbsp;
 &nbsp;
 
-### Step 6 - Update our model
+### Step 8 - Update our model
 
 We want to update our PHMM using the two putative orthologues identified in the step above. 
 
@@ -87,13 +89,13 @@ Use the ```train()``` method to train the original PHMM using the two new sequen
 
 Based on this newly trained HMM answer the following questions
 
-# Question 6
+# Question 9
 Look at the new emission matrix. What amino acid has the highest probability of emission from the 2nd module?
 
-# Question 7
+# Question 10
 Look at the transition matrix. This format is slightly different from what we have seen before. Instead of listing _every_ state they list the possible transitions between Deletion (D), Insertion (I), or Module (M) states. Identify the row that contains hidden state transition from Module to Insertion. Which module(s) has the greatest transition probability from Module to Insertion? 
 
-# Question 8
+# Question 11
 How does the probability of observing New_Seq2 change between the old and new PHMM? (Does observing the sequence get more or less likely?)
 
 &nbsp;
