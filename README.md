@@ -1,3 +1,6 @@
+##notes for next time - dash/vs/I
+##set seed
+
 # Problem_Set_11
 
 This week we continued to learn about Hidden Markov Models. A common use for HMMs is analysis of biological sequence data. 
