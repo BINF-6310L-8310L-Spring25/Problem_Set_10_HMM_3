@@ -1,6 +1,3 @@
-##notes for next time - dash/vs/I
-##set seed
-
 # Problem_Set_10
 
 This week we continued to learn about Hidden Markov Models. A common use for HMMs is analysis of biological sequence data. 
@@ -34,7 +31,11 @@ What is the mean sequence length of the BBH1 sequences?
 
 ### Step 3 - Align the sequences (1 point each)
 
+In this chunk set your seed to 123 ```set.seed(123)```
+
 Use the ```align()``` function from aphid to align the input sequences. Save the output into a new variable
+
+You can view the alignment by using the ```alview()``` function
 
 Answer the following questions about the alignment
 
@@ -42,12 +43,14 @@ Answer the following questions about the alignment
 How many modules were in the PHMM used to create the alignment
 
 # Question 3
-How many of the hidden states were "Insertion" states? _Hint_ you will need to find the number of times that "I" is used in the alignment
+How many of the hidden states were "Insertion" states? _Hint_ you will need to find the number of times that "I" is the "hidden" state. 
 
 &nbsp;
 &nbsp;
 
 ### Step 4 - Create a PHMM 
+
+In this chunk set your seed to 123 ```set.seed(123)```
 
 We want to utilize the fact that the aphid package _knows_ about the relationships between amino acids 
 
@@ -67,6 +70,8 @@ Look at the transition matrix. This format is slightly different from what we ha
 
 ### Step 5 - Probability of new sequences 
 
+In this chunk set your seed to 123 ```set.seed(123)```
+
 You have three new sequences. You want to determine if any of these three sequences are likely to encode the BBH1 gene. 
 
 Read in the new sequences found in the file **new_SeqsA.fasta**
@@ -83,6 +88,8 @@ Which sequence is likely **not** an ortholog of the BBH1 gene?
 &nbsp;
 
 ### Step 8 - Update our model
+
+In this chunk set your seed to 123 ```set.seed(123)```
 
 We want to update our PHMM using the two putative orthologues identified in the step above. 
 
